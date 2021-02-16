@@ -13,6 +13,10 @@
 		2B42D67E25D5DBFE00165429 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B42D67D25D5DBFE00165429 /* Preview Assets.xcassets */; };
 		2B42D68925D5DBFF00165429 /* AdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42D68825D5DBFF00165429 /* AdventureTests.swift */; };
 		2B42D69425D5DBFF00165429 /* AdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42D69325D5DBFF00165429 /* AdventureUITests.swift */; };
+		2B42D6A525DB16CC00165429 /* FadeEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42D6A425DB16CC00165429 /* FadeEffectView.swift */; };
+		2B42D6D125DB3AB800165429 /* NotoSerifKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2B42D6C525DB3A3D00165429 /* NotoSerifKR-Light.otf */; };
+		2B42D6FA25DB4CE500165429 /* Ballet-Regular-VariableFont_opsz.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B42D6F925DB4CE500165429 /* Ballet-Regular-VariableFont_opsz.ttf */; };
+		2B42D70725DB5E4900165429 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B42D70625DB5E4900165429 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		2B42D68F25D5DBFF00165429 /* AdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdventureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B42D69325D5DBFF00165429 /* AdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureUITests.swift; sourceTree = "<group>"; };
 		2B42D69525D5DBFF00165429 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B42D6A425DB16CC00165429 /* FadeEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEffectView.swift; sourceTree = "<group>"; };
+		2B42D6C525DB3A3D00165429 /* NotoSerifKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSerifKR-Light.otf"; path = "/Users/danbeers/Library/Autosave Information/Adventure/Adventure/NotoSerifKR-Light.otf"; sourceTree = "<absolute>"; };
+		2B42D6F925DB4CE500165429 /* Ballet-Regular-VariableFont_opsz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ballet-Regular-VariableFont_opsz.ttf"; path = "../../../../Downloads/Ballet,Cardo-2/Ballet/Ballet-Regular-VariableFont_opsz.ttf"; sourceTree = "<group>"; };
+		2B42D70625DB5E4900165429 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 		2B42D67525D5DBFE00165429 /* Adventure */ = {
 			isa = PBXGroup;
 			children = (
+				2B42D6F925DB4CE500165429 /* Ballet-Regular-VariableFont_opsz.ttf */,
+				2B42D6C525DB3A3D00165429 /* NotoSerifKR-Light.otf */,
 				2B42D67625D5DBFE00165429 /* AdventureApp.swift */,
 				2B42D67825D5DBFE00165429 /* ContentView.swift */,
+				2B42D6A425DB16CC00165429 /* FadeEffectView.swift */,
+				2B42D70625DB5E4900165429 /* TestView.swift */,
 				2B42D67A25D5DBFE00165429 /* Assets.xcassets */,
 				2B42D67F25D5DBFE00165429 /* Info.plist */,
 				2B42D67C25D5DBFE00165429 /* Preview Content */,
@@ -233,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B42D6FA25DB4CE500165429 /* Ballet-Regular-VariableFont_opsz.ttf in Resources */,
+				2B42D6D125DB3AB800165429 /* NotoSerifKR-Light.otf in Resources */,
 				2B42D67E25D5DBFE00165429 /* Preview Assets.xcassets in Resources */,
 				2B42D67B25D5DBFE00165429 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B42D70725DB5E4900165429 /* TestView.swift in Sources */,
+				2B42D6A525DB16CC00165429 /* FadeEffectView.swift in Sources */,
 				2B42D67925D5DBFE00165429 /* ContentView.swift in Sources */,
 				2B42D67725D5DBFE00165429 /* AdventureApp.swift in Sources */,
 			);

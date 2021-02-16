@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/danbeers/Library/Autosave Information/Adventure/Adventure/TestView.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/danbeers/Library/Autosave Information/Adventure/Adventure/NotoSerifKR-Light.otf">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>
