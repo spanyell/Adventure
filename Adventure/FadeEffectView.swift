@@ -12,11 +12,6 @@ import AVKit
 
 struct FadeEffectView: View {
     
-    func moveWords() {
-        onceMove.toggle()
-            
-    }
-    
     @State private var fadeInOut = true
     @State private var fadeInOut2 = true
     @State private var fadeInOut3 = true
@@ -26,8 +21,6 @@ struct FadeEffectView: View {
     @State private var uponMove = true
     @State private var aMove = true
     @State private var timeMove = true
-    @State var musicPlayer: AVAudioPlayer!
-    @State var thunderEffect: AVAudioPlayer!
     
     
     var body: some View {
@@ -41,14 +34,14 @@ struct FadeEffectView: View {
                 .onAppear() {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     withAnimation(Animation
-                                    .easeInOut(duration: 2)
+                                    .easeInOut(duration: 1)
                                     .repeatCount(1, autoreverses: true))
                     {
                         fadeInOut.toggle()
                     }
                         
                 }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -59,28 +52,14 @@ struct FadeEffectView: View {
                 }
                             
             }
-                    
-        
-                
-                .onAppear() {
-                    if let mainViewMusic = NSDataAsset(name: "MainViewMusic") {
-                        musicPlayer = try! AVAudioPlayer(data: mainViewMusic.data, fileTypeHint: "mp3")
-                        musicPlayer.play()
-                    }
-                    if let thunder = NSDataAsset(name: "Thunder") {
-                        thunderEffect = try! AVAudioPlayer(data: thunder.data, fileTypeHint: "mp3")
-                    }
-                }
                 .opacity(fadeInOut ? 0 : 1)
-                .offset(x: -130, y: onceMove ? -300: 400)
-            
-                
+                .offset(x: onceMove ? -130 : -80, y: onceMove ? -300 : 400)
             
             Text("Upon")
                 .font(Font.custom("Snell Roundhand", size: 60))
                 .foregroundColor(.white)
                 .onAppear() {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -89,7 +68,7 @@ struct FadeEffectView: View {
                     }
                         
                 }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -101,14 +80,14 @@ struct FadeEffectView: View {
                 }
             }
                 .opacity(fadeInOut2 ? 0 : 1)
-                .offset(x: -50, y: uponMove ? -100: 400)
+                .offset(x: uponMove ? -50 : 0, y: uponMove ? -100: 400)
                 .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
             
             Text("a")
                 .font(Font.custom("Snell Roundhand", size: 60))
                 .foregroundColor(.white)
                 .onAppear() {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -117,7 +96,7 @@ struct FadeEffectView: View {
                     }
                         
                 }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -129,13 +108,13 @@ struct FadeEffectView: View {
                 }
             }
                 .opacity(fadeInOut3 ? 0 : 1)
-                .offset(x: 25, y: aMove ? 0 : 400)
+                .offset(x: aMove ? 25 : 75, y: aMove ? 0 : 400)
             
             Text("Time...")
                 .font(Font.custom("Snell Roundhand", size: 60))
                 .foregroundColor(.white)
                 .onAppear() {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -144,7 +123,7 @@ struct FadeEffectView: View {
                     }
                         
                 }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 11) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
                     withAnimation(Animation
                                     .easeInOut(duration: 2)
                                     .repeatCount(1, autoreverses: true))
@@ -181,18 +160,13 @@ struct FadeEffectView: View {
                                     .repeatCount(1, autoreverses: true))
                     {
                         fadeInOut5.toggle()
-                        thunderEffect.play()
-                        musicPlayer.setVolume(0, fadeDuration: 1)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            musicPlayer.stop()
-                    }
                 }
             }
         }
-        
+        .navigationBarHidden(true)
     }
-
 }
+
 
 struct FadeEffectView_Previews: PreviewProvider {
     static var previews: some View {
